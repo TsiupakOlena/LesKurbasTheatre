@@ -1,0 +1,85 @@
+@import "compass/css3";
+
+@mixin on-circle($item-count, $circle-size, $item-size, $rot) {
+  position: relative;
+  width:  $circle-size;
+  height: $circle-size/20;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+
+  > * {
+    display: block;
+    position: absolute;
+    top:0%;
+    left: 0%;
+    margin: 0%;
+    width:  $item-size;
+    height: $item-size;
+
+    $angle: (150 / $item-count);
+
+    @for $i from 1 through $item-count {
+      &:nth-of-type(#{$i}) {
+        transform: rotate($rot * 1deg) translate($circle-size / 2) rotate($rot * -1deg);
+      }
+
+      $rot: $rot + $angle;
+    }
+  }
+}
+
+.circle-container-zero  {
+  @include on-circle($item-count: 8, $circle-size: 16em, $item-size: 6em, $rot:31);
+  margin-left: 31.4em;
+
+  button {
+    font-size: 1.5em;
+    max-width: 100%;
+    border-radius: 50%;
+    color: lightgrey;
+    border: solid 5px tomato;
+    transition: .15s;
+  }
+}
+
+.circle-container-one {
+  @include on-circle($item-count: 10, $circle-size: 20em, $item-size: 6em, $rot:20);
+  margin-left:31.4em;
+
+  button {
+    font-size:  1.5em;
+    max-width: 100%;
+    border-radius: 50%;
+    color: lightgrey;
+    border: solid 5px tomato;
+    transition: .15s;
+  }
+}
+
+.circle-container-two {
+  @include on-circle($item-count: 13, $circle-size: 24em, $item-size: 6em, $rot:17);
+  margin-left:31.4em;
+
+  button {
+    font-size:  1.5em;
+    max-width: 100%;
+    border-radius: 50%;
+    color: lightgrey;
+    border: solid 5px tomato;
+    transition: .15s;
+  }
+}
+
+.circle-container-three {
+  @include on-circle($item-count: 16, $circle-size: 28em, $item-size: 6em, $rot:16);
+  margin-left:31.4em;
+
+  button {
+    font-size: 1.5em;
+    max-width: 100%;
+    border-radius: 50%;
+    color:lightgrey;
+    border: solid 5px tomato;
+  }
+}

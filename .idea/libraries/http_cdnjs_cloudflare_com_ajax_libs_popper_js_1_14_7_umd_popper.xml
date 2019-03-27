@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="http_cdnjs.cloudflare.com_ajax_libs_popper.js_1.14.7_umd_popper" type="kotlin.js">
+    <CLASSES>
+      <root url="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_cdnjs.cloudflare.com_ajax_libs_popper.js_1.14.7_umd_popper.js" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
